@@ -1372,7 +1372,6 @@
       #passwordtoggler-container label {
         float: left;
         display: inline !important;
-        margin-top: 5px;
       }
       /* endinject */
     </style>
@@ -1407,7 +1406,7 @@
         checkbox.setAttribute("type", "checkbox");
         var id = pwd.id + "toggler";
         checkbox.setAttribute("id", id);
-        checkbox.style.width="auto !important";
+        checkbox.style.setProperty("width", "auto", "important");
         var label = document.createElement("label");
         label.setAttribute("for", id);
         label.appendChild(document.createTextNode("show password"));
