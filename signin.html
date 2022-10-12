@@ -1350,6 +1350,29 @@
       #SignInWithLogonNameExchange:hover {
         background-color: #fff;
       }
+      #passwordtoggler-container {
+        clear: both;
+        float: left;
+        width: 100%;
+      }
+      #passwordtoggler {
+        float: left;
+        width: auto !important;
+        height: 20px;
+        display: inline;
+        margin-right: 15px;
+        margin-top: 0;
+        -ms-transform: scale(2); /* IE */
+        -moz-transform: scale(2); /* FF */
+        -webkit-transform: scale(2); /* Safari and Chrome */
+        -o-transform: scale(2); /* Opera */
+        transform: scale(2);
+      }
+
+      #passwordtoggler-container label {
+        float: left;
+        display: inline;
+      }
       /* endinject */
     </style>
   </head>
@@ -1418,30 +1441,5 @@
 
       setupPwdTogglers();
     </script>
-    <style>
-      #passwordtoggler-container {
-        clear: both;
-        float: left;
-        width: 100%;
-      }
-      #passwordtoggler {
-        float: left;
-        width: auto !important;
-        height: 20px;
-        display: inline;
-        margin-right: 15px;
-        margin-top: 0;
-        -ms-transform: scale(2); /* IE */
-        -moz-transform: scale(2); /* FF */
-        -webkit-transform: scale(2); /* Safari and Chrome */
-        -o-transform: scale(2); /* Opera */
-        transform: scale(2);
-      }
-
-      #passwordtoggler-container label {
-        float: left;
-        display: inline;
-      }
-    </style>
   </body>
 </html>
