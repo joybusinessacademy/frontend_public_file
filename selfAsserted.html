@@ -1563,7 +1563,7 @@
 
     function setPasswordNotification() {
       const passwordField = document.getElementById("newPassword");
-
+      const inputFieldContainer = document.getElementById("newPassword_label");
       // Create or update password validation container
       let passwordNotification = document.getElementById(
         "password-notification-container"
@@ -1572,13 +1572,15 @@
       passwordNotification.id = "password-notification-container";
       passwordNotification.style.display = "block";
       passwordNotification.style.textAlign = "left";
-      passwordField.after(passwordNotification);
+      inputFieldContainer.before(passwordNotification);
       if (passwordField) {
         passwordNotification.innerHTML =
           "Avoid common passwords, such as Password! Try a passphrase like: GiraffesDance!7Trees";
       }
     }
 
-    waitForElement("newPassword", setPasswordNotification);
+    waitForElement("newPassword", () => {
+      waitForElement("newPassword_label", setPasswordNotification);
+    });
   </script>
 </html>
